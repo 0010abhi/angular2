@@ -1,0 +1,10 @@
+**/node_modules
+**/bower_components
+.vscode/
+.editorconfig
+**/app/**/*.js
+**/app/**/**/*.js
+**/app/**/*.js.map
+**/app/**/**/*.js.map
+**/main.js
+**/main.js.map

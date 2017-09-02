@@ -1,0 +1,17 @@
+<div class="row web-intro">
+    <div class="col-sm-9">
+        <h3>{{title}}</h3>
+        <h4>{{description}}</h4>
+    </div>
+    <div class="col-sm-3">
+            <!-- (focus)="showMatchedWords=true;" (blur)="showMatchedWords=false;" -->
+        <input  #searchBox id="search-box" class='form-control' placeholder="Track any word from lists" (keyup)="search(searchBox.value)" />
+        <div class="search-result-div" *ngIf="showMatchedWords">
+        <div *ngFor="let words of matchedWords" class="search-result" (click)="GoTo(words.Index);searchBox.value='';showMatchedWords=false;">
+            <strong>{{words.Word}}</strong>&nbsp;(List&nbsp;{{words.Index}})
+        </div>
+        </div>
+    </div>
+    
+</div>
+<router-outlet></router-outlet>

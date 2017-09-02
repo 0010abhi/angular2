@@ -1,0 +1,47 @@
+<div class="panel panel-default list-panel">
+  <a data-toggle="collapse" data-parent="#accordion" id="accord{{serialNum}}" href="#collapse{{serialNum}}">
+    <div class="panel-heading list-panel-heading">
+      <h4 class="panel-title list-panel-font-color">List-{{serialNum}}</h4>
+      <div class="panel-gist panel-gist-font-color">{{formatAsString(listGista)}}</div>
+    </div>
+  </a>
+  <div id="collapse{{serialNum}}" class="panel-collapse collapse">
+    <div class="panel-body">
+      <div class="col-sm-3">
+          <!-- [themeWord]="word.themeWord" -->
+          <!-- {{dataCol.dataCol1| vocabJsonFilter| json}} -->
+        <word-panel *ngFor="let word of dataCol.dataCol1|vocabJsonFilter;let i=index;" [themeWord]="word.themeWord" [wordList]="word.wordList" [wordLocation]="getMyLocation(serialNum,1,i+1)"></word-panel>
+        <!-- <word-panel *ngFor="let word of [1,2,3,4,5];let i=index;" [themeWord]="word" [wordLocation]="getMyLocation(serialNum,1,i+1)"></word-panel> -->
+      </div>
+      <div class="col-sm-3">
+          <word-panel *ngFor="let word of dataCol.dataCol2|vocabJsonFilter;let i=index;" [themeWord]="word.themeWord" [wordList]="word.wordList" [wordLocation]="getMyLocation(serialNum,2,i+1)"></word-panel>
+          <!-- <word-panel></word-panel> -->
+      </div>
+      <div class="col-sm-3">
+          <word-panel *ngFor="let word of dataCol.dataCol3|vocabJsonFilter;let i=index;" [themeWord]="word.themeWord" [wordList]="word.wordList" [wordLocation]="getMyLocation(serialNum,3,i+1)"></word-panel>
+          <!-- <word-panel></word-panel> -->
+      </div>
+      <div class="col-sm-3">
+          <word-panel *ngFor="let word of dataCol.dataCol4|vocabJsonFilter;let i=index;" [themeWord]="word.themeWord" [wordList]="word.wordList" [wordLocation]="getMyLocation(serialNum,4,i+1)"></word-panel>
+          <!-- <word-panel></word-panel> -->
+      </div>
+      <!-- <div class="demoClass">
+          ckcjk
+          <a class="panel-heading-link" [routerLink]="['/vocab']" fragment="{{serialNum}}.1.{{serialNum}}" id="{{serialNum}}.1.1">Anchor</a>
+        </div>
+        <div class="demoClass">
+            ckcjk
+            <a class="panel-heading-link" [routerLink]="['/vocab']" fragment="{{serialNum}}.2.{{serialNum}}" id="{{serialNum}}.2.2">Anchor</a>
+          </div>
+          <div class="demoClass">
+              ckcjk
+              <a class="panel-heading-link" [routerLink]="['/vocab']" fragment="{{serialNum}}.3.{{serialNum}}" id="{{serialNum}}.3.1">Anchor</a>
+            </div>
+            <div class="demoClass">
+                ckcjk
+                <a class="panel-heading-link" [routerLink]="['/vocab']" fragment="{{serialNum}}.4.{{serialNum}}" id="{{serialNum}}.4.1">Anchor</a>
+              </div> -->
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

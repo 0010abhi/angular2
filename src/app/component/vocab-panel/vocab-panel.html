@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="panel-group vocab-panel" id="accordion">
+    <list-panel *ngFor="let list of wordListArr" [listNumber]="list.ListNumber" [listData]="list.Words" [colDivide]="list.colDivide" [listGist]="list.ListGist"></list-panel>
+  </div>
+  <!-- <div class="demoClass">
+    ckcjk
+    <a class="panel-heading-link" [routerLink]="['/vocab']" fragment="3.1.1" id="3.1.1">Anchor</a>
+  </div> -->
+</div>
+<!-- <list-panel *ngFor="let list of wordListArr;let i=index;" [listNumber]="i+1" [listData]="list" [colDivide]="[10,10,10,10]"></list-panel> -->

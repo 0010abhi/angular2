@@ -1,0 +1,15 @@
+<div class="word-panel">
+    <div class="word-panel-heading">
+        <!-- [routerLink]="['/vocab']" fragment="{{wordLocation}}" -->
+      <a class="panel-heading-link" href="javascript:void(0);" id="{{wordLocation}}">
+        <span class="word-panel-title">{{themeWord}}</span>
+      </a>
+    </div>
+    <div class="word-panel-body">
+      <ul class="list-style-none" *ngIf="wordList">
+          <li class="black-color" *ngFor="let word of wordList">
+            <span>{{word}}</span>
+          </li>
+      </ul>
+    </div>
+</div>
