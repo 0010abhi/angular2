@@ -1,0 +1,15 @@
+<div class="col-sm-3 utility-nav {{usedFor}}">
+  <div class="wid-93 utility-nav-content" *ngIf="suggestMe" (click)="suggestMe=!suggestMe;">
+    <ul class="list-style-none">
+      <li *ngFor="let text of toggleControlText">{{text}}</li>
+    </ul>
+  </div>
+  <div class="wid-7 utility-nav-toggle" (click)="suggestMe=!suggestMe;">
+    <span>{{content}}</span>
+    <span *ngIf="usedFor==='how-it-works'">
+      <span *ngIf="suggestMe" class="glyphicon glyphicon-chevron-left utility-nav-toggle-sign"></span>
+      <span *ngIf="!suggestMe" class="glyphicon glyphicon-chevron-right utility-nav-toggle-sign"></span>
+    </span>
+    <span *ngIf="usedFor==='share-on'" (click)="shareOnFb()">FB</span>
+  </div>
+</div>

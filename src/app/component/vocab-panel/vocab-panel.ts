@@ -13,6 +13,9 @@ import { VocabPanelService } from './vocab-panel.ext';
 })
 export class VocabPanelComponent implements OnInit { 
     private wordListArr: any[] = [];
+    toggleControlText = ['1) Just go through the all lists once one by one.', '2) Try to remember them in a group.', '3) When you come across these words then just track these by search feature.', '4) In the end you will master these.', '5) Finally, you will feel very much confident in radinng/working with english.'];
+    howItWorksContent = "How it works";
+    shareOnContent = "Share on";
     constructor(
         private vocabPanelService: VocabPanelService
         // private router: Router,

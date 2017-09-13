@@ -1,3 +1,5 @@
+<how-it-works [toggleControlText]="toggleControlText" [content]="howItWorksContent" [usedFor]="'how-it-works'"></how-it-works>
+<how-it-works [toggleControlText]="" [content]="shareOnContent" [usedFor]="'share-on'"></how-it-works>
 <div class="row">
   <div class="panel-group vocab-panel" id="accordion">
     <list-panel *ngFor="let list of wordListArr" [listNumber]="list.ListNumber" [listData]="list.Words" [colDivide]="list.colDivide" [listGist]="list.ListGist"></list-panel>

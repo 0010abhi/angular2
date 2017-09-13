@@ -40,7 +40,6 @@ export class AppComponent implements OnInit {
                 setTimeout(function(){
                     element.scrollIntoView(); 
                     element.focus();
-                    // this.showMatchedWords = false;
                 },100);   
             }
         }
@@ -57,20 +56,6 @@ export class AppComponent implements OnInit {
         .subscribe((event) => {
         console.log('NavigationEnd:', event);
             this.getFragmentAndScroll();
-            // const tree = this.router.parseUrl(this.router.url);
-            // if (tree.fragment) {
-            //     var listNumber = tree.fragment.split(".")[0];
-            //     const ele = document.getElementById('accord'+listNumber);
-            //     ele.click();
-            //     const element = document.getElementById(tree.fragment);
-            //     if (element) {
-            //         setTimeout(function(){
-            //             element.scrollIntoView(); 
-            //             element.focus();
-            //             this.showMatchedWords = false;
-            //         },100);   
-            //     }
-            // }
         });
     }
     
